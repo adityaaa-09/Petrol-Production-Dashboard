@@ -64,9 +64,7 @@ def generate_top5_states_chart(df):
         yaxis_title='Total Production (KL)',
         plot_bgcolor='white',
         paper_bgcolor='white',
-
-
-
+        xaxis=dict(title_font=dict(size=11)),  # Make x-axis title smaller
     )
     fig.update_traces(textposition='outside')
     config = {
@@ -109,6 +107,7 @@ def generate_bottom5_states_chart(df):
         yaxis_title='Total Production (KL)',
         plot_bgcolor='white',
         paper_bgcolor='white',
+        xaxis=dict(title_font=dict(size=11)),  # Make x-axis title smaller
     )
     fig.update_traces(textposition='outside')
 
@@ -180,7 +179,7 @@ def generate_oiltype_donut_chart(df):
         ),
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
-        width=530,
+        width=480,
         height=560,
         margin=dict(t=15, b=75, l=33, r=130),
         annotations=[
@@ -249,7 +248,7 @@ def generate_regionwise_donut_chart_ocean_gradient(df):
         },
         paper_bgcolor='rgba(225,225,225,0)',  # Very light green background
         showlegend=False,
-        width=530,
+        width=480,
         height=560,
         margin=dict(l=50, r=120, t=20, b=120)
     )
@@ -275,21 +274,21 @@ def generate_production_trend_area_chart(df):
         title={
             'text': 'Year Wise Production Total by Oil Type',
             'y': 0.95,
-            'x': 0.45,
+            'x': 0.40,
             'xanchor': 'center',
             'font': {
                 'size': 18,  # ✅ Change size here
                 'color': '#2c3e50'
             }
         },
-        width=750,
+        width=690,
         height=375,
-        title_x=0.5,
+        title_x=0.40,
         xaxis_title='Year',
         yaxis_title='Production (KL)',
         plot_bgcolor='white',
         paper_bgcolor='white',
-        margin=dict(l=80, r=150, t=120, b=20),
+        margin=dict(l=50, r=170, t=120, b=20),
         hovermode='x unified',
         yaxis=dict(
             gridcolor='#d3d3d3',
@@ -397,7 +396,7 @@ def generate_professional_stacked_chart(df):
         margin=dict(l=80, r=150, t=120, b=20),
 
         # Dimensions
-        width=750,
+        width=680,
         height=375,
 
         # Hover styling
